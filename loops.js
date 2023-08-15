@@ -8,7 +8,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 // 1) Crear una función que pida un valor por parámetro y muestre los 10
 // números siguientes.`
 function losDiesNuerosSiguientesDelValorIngresado(ingresaValor) {
-  for (let i = ingresaValor; i <= ingresaValor + 10; i++) {
+  for (let i = ingresaValor + 1; i <= ingresaValor + 10; i++) {
     console.log(i);
   }
   return `fin`;
@@ -54,8 +54,8 @@ console.log(factorialDeN(6));
 // fibonacci hasta el valor ingresado por parámetro.
 
 function mostrarSecuenciaFibonacci(valorIngresado) {
-  const fibonacci = [0, 1];
-  for (var i = 2; i < valorIngresado; i++) {
+  let fibonacci = [0, 1];
+  for (let i = 2; i < valorIngresado; i++) {
     fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
   }
   return fibonacci;
